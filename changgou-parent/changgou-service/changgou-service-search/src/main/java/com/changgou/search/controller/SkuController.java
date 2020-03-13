@@ -21,8 +21,8 @@ public class SkuController {
      * @param searchMap
      * @return
      */
-    @GetMapping
-    public Map search(@RequestParam(required = false) Map<String,String> searchMap){
+    @PostMapping(value = "search")
+    public Map search(@RequestParam(required = false) Map<String, String> searchMap){
         return  skuService.search(searchMap);
     }
 
